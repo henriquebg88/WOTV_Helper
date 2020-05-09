@@ -1,19 +1,11 @@
 
 module.exports = {
-
-    day_number() {
-        var day = new Date();
-        var week_day = day.getDay();
-
-        return week_day;
-    },
-    
     day_name(day_number) {
         var day_name;
 
         switch (day_number) {
             case 1:
-                day_name = 'Segunda FeiFeirara';
+                day_name = 'Segunda Feira';
                 break;
             case 2:
                 day_name = 'Terça Feira';
@@ -30,7 +22,7 @@ module.exports = {
             case 6:
                 day_name = 'Sábado';
                 break;
-            case 7:
+            case 0:
                 day_name = 'Domingo';
                 break;
             default:

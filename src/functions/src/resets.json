@@ -1,17 +1,17 @@
 [
     {
         "title": "Titulo",
-        "description": "Descrição do reset",
+        "description": "Descrição do reset1",
         "when": 16
     },
     {
-        "title": "Titulo",
-        "description": "Descrição do reset",
+        "title": "Titulo2",
+        "description": "Descrição do reset2",
         "when": 16
     },
     {
-        "title": "Titulo",
-        "description": "Descrição do reset",
+        "title": "Titulo3",
+        "description": "Descrição do reset3",
         "when": 16
     }
 ]

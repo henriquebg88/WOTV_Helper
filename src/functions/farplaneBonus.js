@@ -1,6 +1,7 @@
 module.exports =
 {
     call_bonus(day) {
+
                 var bonus_description;
                 var week_day;
 
@@ -29,25 +30,26 @@ module.exports =
                 bonus_description = '2x - Job 9+';
                 week_day = 'Sábado';
                 return { bonus_description, week_day };
-            case 7:
+            case 0:
                 bonus_description = 'Ilimitado - Gil e Ore';
                 week_day = 'Domingo';
                 return { bonus_description, week_day };
             default:
+                console.log('Erro na contagem do dia da semana');
                 break;
         }
     },
     next_bonus_days() {
-        var next_bonus_days = [];
+        var days = [];
 
-        for (let i = 1; i < 7; i++) {
-            var next_day = new Date().getDay() + i;
-            if (next_day > 7) {
-                next_day -= 7;
+            for (let i = 1; i < 7; i++) {
+                var next_day = new Date().getDay() + i;
+                if (next_day > 6) {
+                    next_day -= 7;
+                }
+                days.push(next_day);
             }
-            next_bonus_days.push(next_day);
-        }
 
-        return next_bonus_days;
+        return days;
     }
 }
