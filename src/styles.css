@@ -1,3 +1,120 @@
-#wotv-logo{
-    width: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Lora", Arial, Helvetica, sans-serif ;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 300;
+
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px 0;
+    
+}
+p{
+    color: #666;
+}
+ul{
+    list-style: none;
+}
+
+header{
+    margin: 20px 20px;
+
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 0px;
+    height: 100%;
+}
+header h1{
+    text-align: right;
+}
+header div{
+    width: auto;
+    font-size: 0.8rem;
+}
+header div p{
+    text-align: right;
+}
+header div p span{
+    font-weight: 600;
+    color: black;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    margin-top: 80px;
+}
+
+section{
+    text-align: center;
+    transition: 0.2s;
+    /* background-color: aquamarine; */
+}
+section h2 + p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+section > h3{
+    text-transform: uppercase;
+}
+section > ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    color: #888;
+    transition: 0.2s;
+
+}
+section > ul h3{
+
+    transition: 0.2s;
+    cursor: help;
+}
+section > ul li p{
+    /* background-color: azure; */
+    color: white;
+    transition: 0.2s;
+    cursor: default;
+}
+section > ul  h3:hover + p{
+    /* background-color: azure; */
+    color: #bbb;
+    transition: 0.2s;
+}
+
+aside{
+    /* background-color: blue; */
+    padding: 0 20px;
+}
+
+
+#today_bonus{
+    /* background-color: brown; */
+    text-transform: uppercase;
+
+    margin-bottom: 80px;
 }

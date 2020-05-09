@@ -13,19 +13,19 @@ module.exports = {
 
         switch (day_number) {
             case 1:
-                day_name = 'Segunda Feira';
+                day_name = 'Segunda FeiFeirara';
                 break;
             case 2:
-                day_name = 'Terça Feria';
+                day_name = 'Terça Feira';
                 break;
             case 3:
-                day_name = 'Quarta Feria';
+                day_name = 'Quarta Feira';
                 break;
             case 4:
-                day_name = 'Quinta Feria';
+                day_name = 'Quinta Feira';
                 break;
             case 5:
-                day_name = 'Sexta Feria';
+                day_name = 'Sexta Feira';
                 break;
             case 6:
                 day_name = 'Sábado';

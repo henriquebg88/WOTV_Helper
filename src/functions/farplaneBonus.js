@@ -36,5 +36,18 @@ module.exports =
             default:
                 break;
         }
+    },
+    next_bonus_days() {
+        var next_bonus_days = [];
+
+        for (let i = 1; i < 7; i++) {
+            var next_day = new Date().getDay() + i;
+            if (next_day > 7) {
+                next_day -= 7;
+            }
+            next_bonus_days.push(next_day);
+        }
+
+        return next_bonus_days;
     }
 }

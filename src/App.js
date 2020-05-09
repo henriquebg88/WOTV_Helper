@@ -2,58 +2,59 @@ import React from 'react';
 
 import { day_name, day_number } from './functions/week_day';
 import { brazil_time, server_time } from './functions/hour';
-import { call_bonus } from './functions/farplaneBonus';
+import { call_bonus, next_bonus_days } from './functions/farplaneBonus';
 
 import './styles.css';
 import wotv_logo from './img/wotv_logo.png';
 
 function App() {
 
-	var next_bonus_days = [];
-
-	for (let i = 0; i < 3; i++) {
-		var next_day = new Date().getDay() + i;
-		if (next_day > 7) {
-			next_day -= 7;
-		}
-		next_bonus_days.push(next_day);
-	}
-
 	return (
 		<div className="App">
 
-			<img id='wotv-logo' src={wotv_logo} alt="" />
+			{/* Dia e Horarios */}
+			<header className='data'>
+				<img src={wotv_logo} alt="" />
+				<div>
+					<h1>{day_name(day_number())}</h1>
+					<p>Horário local: <span>{brazil_time.toLocaleTimeString()}</span></p>
+					<p>Horário do servidor: <span>{server_time.toLocaleTimeString()}</span></p>
+				</div>
+			</header>
 
-			<section className='data'>
-				<h1>{day_name(day_number())}</h1>
-				<h3>Horário local: {brazil_time.toLocaleTimeString()}</h3>
-				<p>Horário do servidor: {server_time.toLocaleTimeString()}</p>
-			</section>
+			<div className="content">
+				<section>
+					{/* Bonus do dia */}
+					<div id='today_bonus'>
+						<h2>Bônus disponivel</h2>
+						{/* <h3>{call_bonus(new Date().getDay()).week_day}</h3> */}
+						{/* Bonus de hoje */}
+						<p>{call_bonus(new Date().getDay()).bonus_description}</p>
+					</div>
+					<h3>Próximos bonûs diários:</h3>
+					<ul>
+						{next_bonus_days().map((day) => {
+
+							return (
+								<li key={day}>
+									<h3>{call_bonus(day).week_day}</h3>
+									<p>{call_bonus(day).bonus_description}</p>
+								</li>
+							)
+						})}
+					</ul>
+				</section>
 
 
-			<h2>Farplane bônus</h2>
-
-			<div>
-				<h4>{call_bonus(new Date().getDay()).week_day}</h4>
-				<p>{call_bonus(new Date().getDay()).bonus_description}</p>
+				{/* Bonus nos proximos dias */}
+				<aside>
+					<h2>Resets</h2>
+					<ul>
+						{}
+					</ul>
+				</aside>
+				
 			</div>
-
-			<ul>
-				{next_bonus_days.map((ofset) => {
-
-					var day = new Date().getDay() + ofset;
-					if (day > 7) {
-						day -= 7;			
-					}
-
-					return (
-						<li key={day}>
-							<p>{call_bonus(day).week_day}</p>
-							<h3>{call_bonus(day).bonus_description}</h3>
-						</li>
-					)
-				})}
-			</ul>
 
 		</div>
 	);
