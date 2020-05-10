@@ -11,6 +11,10 @@ import wotv_logo from './img/wotv_logo.png';
 
 function App() {
 
+	var localTime_object = moment();
+	var serverTime_object = moment().utc().subtract(8, 'hours');
+	var timeDiff = localTime_object.hours() - serverTime_object.hours();
+
 	const [localTime, set_localTime] = useState(0);
 	const [serverHour, set_serverHour] = useState(0);
 
@@ -19,8 +23,12 @@ function App() {
 	setInterval(updateTime, 1000);
 
 	function updateTime() {
-		set_localTime(moment().format('HH:mm:ss'));
-		set_serverHour(moment().utc().subtract(8, 'hours').format('HH:mm:ss'));
+
+		localTime_object = moment();
+		serverTime_object = moment().utc().subtract(8, 'hours');
+
+		set_localTime(localTime_object.format('HH:mm:ss'));
+		set_serverHour(serverTime_object.format('HH:mm:ss'));
 	}
 
 	return (
@@ -60,16 +68,17 @@ function App() {
 					</ul>
 				</section>
 
-				
+
 				<aside>
 					<div id='resets'>
 						<h2>Resets</h2>
 						<ul>
 							{resetStack(Resets).map((reset) => {
-								return(
-									<li key={ reset.title + reset.when } className={resetActive}>
-										<p className='timer'>{ resetTimer(moment(), reset) }</p>
-										<h3>{ reset.title }</h3>
+								{var reset_element = resetTimer(localTime_object, serverTime_object,reset)}
+								return (
+									<li key={reset.title + reset.when} className={reset_element.htmlClass}>
+										<p className='timer'>{reset_element.timerString}</p>
+										<h3>{reset.title}</h3>
 										<p className='description'>{reset.description}</p>
 									</li>
 								)

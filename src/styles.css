@@ -125,14 +125,14 @@ aside h2{
     font-size: 0.8rem;
     color: #666;
 }
-aside #resets li.active{
+aside #resets li.reseted{
     border-color: #ddd!important;
     color: #ddd!important;
 }
-aside #resets li.active p
+aside #resets li.reseted p
 
 #resets li h3{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 #resets li .description{
     display: none;
