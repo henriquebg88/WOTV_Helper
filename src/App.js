@@ -3,6 +3,8 @@ import moment from 'moment';
 
 import { day_name } from './functions/week_day';
 import { call_bonus, next_bonus_days } from './functions/farplaneBonus';
+import { resetStack, resetActive, resetTimer } from './functions/resets_controller';
+import Resets from './functions/src/resets.json';
 
 import './styles.css';
 import wotv_logo from './img/wotv_logo.png';
@@ -17,8 +19,8 @@ function App() {
 	setInterval(updateTime, 1000);
 
 	function updateTime() {
-		set_localTime( moment().format('HH:mm:ss') );
-		set_serverHour( moment().utc().subtract(8,'hours').format('HH:mm:ss') );
+		set_localTime(moment().format('HH:mm:ss'));
+		set_serverHour(moment().utc().subtract(8, 'hours').format('HH:mm:ss'));
 	}
 
 	return (
@@ -43,6 +45,8 @@ function App() {
 						{/* Bonus de hoje */}
 						<p>{call_bonus(today).bonus_description}</p>
 					</div>
+
+					{/* Bonus dos proximos dias */}
 					<h3>Próximos bonûs diários:</h3>
 					<ul>
 						{next_bonus_days().map((day) => {
@@ -53,15 +57,26 @@ function App() {
 								</li>
 							)
 						})}
-					</ul>	
+					</ul>
 				</section>
 
-				{/* Bonus nos proximos dias */}
+				
 				<aside>
-					<h2>Resets</h2>
-					<ul>
-						{}
-					</ul>
+					<div id='resets'>
+						<h2>Resets</h2>
+						<ul>
+							{resetStack(Resets).map((reset) => {
+								return(
+									<li key={ reset.title + reset.when } className={resetActive}>
+										<p className='timer'>{ resetTimer(moment(), reset) }</p>
+										<h3>{ reset.title }</h3>
+										<p className='description'>{reset.description}</p>
+									</li>
+								)
+
+							})}
+						</ul>
+					</div>
 				</aside>
 
 			</div>

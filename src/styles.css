@@ -22,12 +22,8 @@ h2{
 }
 h3{
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     margin: 10px 0;
-    
-}
-p{
-    color: #666;
 }
 ul{
     list-style: none;
@@ -61,7 +57,7 @@ header div p span{
 
 .content{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
 
     margin-top: 80px;
 }
@@ -110,7 +106,37 @@ aside{
     /* background-color: blue; */
     padding: 0 20px;
 }
+aside h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+#resets li{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 3px auto;
+    padding: 2px 16px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.8rem;
+    color: #666;
+}
+aside #resets li.active{
+    border-color: #ddd!important;
+    color: #ddd!important;
+}
+aside #resets li.active p
+
+#resets li h3{
+    font-size: 0.8rem;
+}
+#resets li .description{
+    display: none;
+}
 
 #today_bonus{
     /* background-color: brown; */

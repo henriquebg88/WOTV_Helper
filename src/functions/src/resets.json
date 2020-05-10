@@ -1,17 +1,22 @@
 [
     {
-        "title": "Titulo",
+        "title": "Shop",
+        "description": "Reset do common shop",
+        "when": 6
+    },
+    {
+        "title": "Shop",
+        "description": "Reset do common shop",
+        "when": 12
+    },
+    {
+        "title": "Shop",
+        "description": "Reset do common shop",
+        "when": 18
+    },
+    {
+        "title": "Reset geral",
         "description": "Descrição do reset1",
-        "when": 16
-    },
-    {
-        "title": "Titulo2",
-        "description": "Descrição do reset2",
-        "when": 16
-    },
-    {
-        "title": "Titulo3",
-        "description": "Descrição do reset3",
-        "when": 16
+        "when": 0
     }
 ]

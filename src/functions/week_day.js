@@ -1,4 +1,3 @@
-
 module.exports = {
     day_name(day_number) {
         var day_name;
@@ -29,6 +28,5 @@ module.exports = {
                 break;
         }
         return day_name;
-    },
-
+    }
 }
