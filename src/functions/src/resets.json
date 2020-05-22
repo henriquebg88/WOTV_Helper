@@ -15,8 +15,38 @@
         "when": 18
     },
     {
-        "title": "Reset geral",
+        "title": "Geral",
         "description": "Descrição do reset1",
         "when": 24
+    },
+    {
+        "title": "Normal Summon",
+        "description": "Descrição do reset1",
+        "when": 8
+    },    
+    {
+        "title": "Normal Summon",
+        "description": "Descrição do reset1",
+        "when": 16
+    },    
+    {
+        "title": "NGR bônus",
+        "description": "Descrição do reset1",
+        "when": 8
+    },
+    {
+        "title": "NGR bônus",
+        "description": "Descrição do reset1",
+        "when": 16
+    },
+    {
+        "title": "Guild Battle - Inicio",
+        "description": "Descrição do reset1",
+        "when": 11
+    },
+    {
+        "title": "Guild Battle - Fim",
+        "description": "Descrição do reset1",
+        "when": 23
     }
 ]

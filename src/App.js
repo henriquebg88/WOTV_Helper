@@ -14,12 +14,14 @@ function App() {
 	var localTime_object = moment();
 	var serverTime_object = moment().utc().subtract(8, 'hours');
 	var timeDiff = localTime_object.hours() - serverTime_object.hours();
-
+	
 	const [localTime, set_localTime] = useState(0);
 	const [serverHour, set_serverHour] = useState(0);
-
+	
 	const today = moment().weekday();
 
+	var bonusToday = call_bonus(serverTime_object.weekday());
+	
 	setInterval(updateTime, 1000);
 
 	function updateTime() {
@@ -38,7 +40,7 @@ function App() {
 			<header className='data'>
 				<img src={wotv_logo} alt="" />
 				<div>
-					<h1>{day_name(today)}</h1>
+					<h1>{day_name(serverTime_object.weekday())}</h1>
 					<p>Horário local: <span>{localTime}</span></p>
 					<p>Horário do servidor: <span>{serverHour}</span></p>
 				</div>
@@ -46,18 +48,24 @@ function App() {
 
 			<div className="content">
 				<section>
-					{/* Bonus do dia */}
+					{/* Bonus do dia atual */}
 					<div id='today_bonus'>
-						<h2>Bônus disponivel</h2>
+						<h2>Farplane Bônus</h2>
 						{/* <h3>{call_bonus(new Date().getDay()).week_day}</h3> */}
 						{/* Bonus de hoje */}
-						<p>{call_bonus(today).bonus_description}</p>
+						<div>
+							<p>{bonusToday.bonus_description}</p>
+							<div>
+								<div className={'elemento ' + bonusToday.element1}></div>
+								<div className={'elemento ' + bonusToday.element2}></div>
+							</div>
+						</div>
 					</div>
 
 					{/* Bonus dos proximos dias */}
 					<h3>Próximos bonûs diários:</h3>
 					<ul>
-						{next_bonus_days().map((day) => {
+						{next_bonus_days(serverTime_object.weekday()).map((day) => {
 							return (
 								<li key={day}>
 									<h3>{call_bonus(day).week_day}</h3>
@@ -66,6 +74,7 @@ function App() {
 							)
 						})}
 					</ul>
+					<p className='small_info'>*Apesar de o jogo não mostrar, os mesmos bonûs contemplam o Multi.</p>
 				</section>
 
 

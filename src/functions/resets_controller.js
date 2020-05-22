@@ -1,18 +1,15 @@
 module.exports = {
     resetStack(Resets){
 
+        //Ajusta a ordem dos resets pelo tempo
         function order_resets(a, b) {
-            //If a resets before b, a will be ordered first
             if(a.when < b.when) return -1
             if(a.when > b.when) return 1
             return 0
         }
         Resets.sort(order_resets);
-
+        //retorna a lista reordenada
         return Resets;
-    },
-    resetActive(){
-        return null;
     },
     resetTimer(localTime_obj, serverTime_obj, reset){
 
@@ -25,21 +22,23 @@ module.exports = {
             htmlClass: null
         };
 
-        timer.hours += reset.when - localTime_obj.hours();
-        if(timer.minutes > 0) timer.hours -= 1;
-        timer.minutes += 59 - localTime_obj.minutes();
-        if(timer.seconds > 0) timer.minutes -= 1;
-        timer.seconds += 59 - localTime_obj.seconds();
-
+        timer.hours += reset.when - serverTime_obj.hours();
+        timer.minutes += 59 - serverTime_obj.minutes();
+        timer.seconds += 59 - serverTime_obj.seconds();
+            if(timer.minutes > 0){
+                timer.hours --;
+            };
     
-
+        if(reset.title == 'Geral' )
+        {
+            timer.htmlClass = 'geral';
+        }
         if(timer.hours < 0)
         {
-            
             var local_reset = reset.when + localTime_obj.hours() - serverTime_obj.hours();
 
             timer.timerString = `${local_reset}:00`;
-            timer.htmlClass = 'reseted';
+            timer.htmlClass = 'hidden';
             return timer;
         }
         
@@ -62,13 +61,16 @@ module.exports = {
             {
                 timerString = timerString.concat(0);
             }
-            timerString = timerString.concat(minutes) + ':'; 
+            timerString = timerString.concat(minutes); 
     
-            if(seconds < 10)
-            {
-                timerString = timerString.concat(0);
-            }
-            timerString = timerString.concat(seconds); 
+            //UNCOMMENT to show seconds on RESETS
+
+            // timerString += ':'
+            // if(seconds < 10)
+            // {
+            //     timerString = timerString.concat(0);
+            // }
+            // timerString = timerString.concat(seconds); 
     
             return timerString;
         }
