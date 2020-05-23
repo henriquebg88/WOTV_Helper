@@ -2,10 +2,10 @@ module.exports =
 {
     call_bonus(day) {
 
-                var bonus_description;
-                var week_day;
-                var element1;
-                var element2;
+        var bonus_description;
+        var week_day;
+        var element1;
+        var element2;
 
         switch (day) {
             case 1:
@@ -58,13 +58,13 @@ module.exports =
     next_bonus_days(day) {
         var days = [];
 
-            for (let i = 1; i < 7; i++) {
-                var next_day = day + i;
-                if (next_day > 6) {
-                    next_day -= 7;
-                }
-                days.push(next_day);
+        for (let i = 1; i < 7; i++) {
+            var next_day = day + i;
+            if (next_day > 6) {
+                next_day -= 7;
             }
+            days.push(next_day);
+        }
 
         return days;
     }
