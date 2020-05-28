@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { call_bonus, next_bonus_days } from './functions/farplaneBonus';
-import { resetStack, resetActive, resetTimer } from './functions/resets_controller';
-import Resets from './functions/src/resets.json';
+import { resetStack, resetActive, resetTimer } from '../../functions/resets_controller';
+import Resets from '../../functions/src/resets.json';
+import { localTime_object, serverTime_object } from '../../functions/time';
+
+import './styles.css';
 
 export default function ResetTimer(params) {
     return (

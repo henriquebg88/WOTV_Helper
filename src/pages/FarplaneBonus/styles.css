@@ -1,0 +1,140 @@
+section{
+    text-align: center;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #efefef;
+    margin: 0 40px;
+
+    
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: max-content;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+section h2 + p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+section > h3{
+    color: #666;
+}
+section > ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    margin-top: 0;
+    color: #888;
+    transition: 0.2s;
+}
+section li{
+    background-color: #fafafa;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+}
+section > ul h3{
+
+    transition: 0.2s;
+    cursor: help;
+}
+section > ul li p{
+    /* background-color: azure; */
+    color: #aaa;
+    transition: 0.2s;
+    cursor: default;
+}
+section > ul  h3:hover + p{
+    /* background-color: azure; */
+    color: #bbb;
+    transition: 0.2s;
+}
+
+#today_bonus{
+    /* background-color: brown; */
+    text-transform: uppercase;
+
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+#today_bonus h2{
+    margin-bottom: 20px;
+}
+#today_bonus p{
+    padding: 30px 40px;
+    margin: auto;
+    width: max-content;
+    border-radius: 8px;
+
+    color: #666;
+
+    background-color: #fefefe;
+    border: 1px solid #bbb;
+}
+div#today_bonus h2 + div{
+    display: inline-flex;
+}
+div#today_bonus h2 + div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 5px;
+    }
+
+.elemento{
+    background-color: black;
+    height: 37px;
+    width: 37px;
+    display: flex;
+
+    border-radius: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.dark{
+    background-color:purple ;
+    box-shadow: 0 0 3px purple;
+}
+.stone{
+    background-color: chocolate;
+    box-shadow: 0 0 3px chocolate;
+}
+.lightening{
+    background-color: yellow;
+    box-shadow: 0 0 3px yellow;
+}
+.light{
+    background-color: bisque;
+    box-shadow: 0 0 3px bisque;
+}
+.water{
+    background-color: darkturquoise;
+    box-shadow: 0 0 3px darkturquoise;
+}
+.ice{
+    background-color: dodgerblue;
+    box-shadow: 0 0 3px dodgerblue;
+}
+.wind{
+    background-color: greenyellow;
+    box-shadow: 0 0 3px greenyellow;
+}
+.fire{
+    background-color: orangered;
+    box-shadow: 0 0 3px orangered;
+}
+.no_element{
+    display: none;
+}
+
+.small_info{
+    color: #888;
+    font-size: 0.8em;
+    font-style: italic;
+}

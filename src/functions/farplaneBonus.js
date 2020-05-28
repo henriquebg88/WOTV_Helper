@@ -9,43 +9,43 @@ module.exports =
 
         switch (day) {
             case 1:
-                bonus_description = '2x - Exp, Gil, Ore and CardExp / AbilityExp';
+                bonus_description = '2x: Exp, Gil, Ore, Card Exp, LB Ability Exp';
                 week_day = 'Segunda Feira';
                 element1 = 'no_element';
                 element2 = 'no_element';
                 return { bonus_description, week_day, element1, element2 };
             case 2:
-                bonus_description = '2x - Fogo e Vento';
+                bonus_description = '2x: Fogo e Vento';
                 week_day = 'Terça Feira';
                 element1 = 'fire';
                 element2 = 'wind';
                 return { bonus_description, week_day, element1, element2 };
             case 3:
-                bonus_description = '2x - Agua e Gelo';
+                bonus_description = '2x: Agua e Gelo';
                 week_day = 'Quarta Feira';
                 element1 = 'water';
                 element2 = 'ice';
                 return { bonus_description, week_day, element1, element2 };
             case 4:
-                bonus_description = '2x - Pedra e Trevas';
+                bonus_description = '2x: Pedra e Trevas';
                 week_day = 'Quinta Feira';
                 element1 = 'stone';
                 element2 = 'dark';
                 return { bonus_description, week_day, element1, element2 };
             case 5:
-                bonus_description = '2x - Raio e Luz';
+                bonus_description = '2x: Raio e Luz';
                 week_day = 'Sexta Feira';
                 element1 = 'lightening';
                 element2 = 'light';
                 return { bonus_description, week_day, element1, element2 };
             case 6:
-                bonus_description = '2x - Job 9+';
+                bonus_description = '2x: Job Chamber | Ilimitado: Gil e Ore';
                 week_day = 'Sábado';
                 element1 = 'no_element';
                 element2 = 'no_element';
                 return { bonus_description, week_day, element1, element2 };
             case 0:
-                bonus_description = 'Ilimitado - Gil e Ore';
+                bonus_description = 'Ilimitado: Gil e Ore';
                 week_day = 'Domingo';
                 element1 = 'no_element';
                 element2 = 'no_element';

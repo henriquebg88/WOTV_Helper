@@ -1,9 +1,12 @@
 import React from 'react';
 import { call_bonus ,next_bonus_days } from '../../functions/farplaneBonus';
+import { serverTime_object } from '../../functions/time';
 
-export default function FarplaneBonusPage(props) {
+import './styles.css';
+
+export default function FarplaneBonusPage() {
     
-    var bonusToday = call_bonus(props.serverTime.weekday());
+    var bonusToday = call_bonus(serverTime_object.weekday());
 
     return (
         <section>
@@ -24,7 +27,7 @@ export default function FarplaneBonusPage(props) {
             {/* Bonus dos proximos dias */}
             <h3>Próximos bonûs diários:</h3>
             <ul>
-                {next_bonus_days(props.serverTime.weekday()).map((day) => {
+                {next_bonus_days(serverTime_object.weekday()).map((day) => {
                     return (
                         <li key={day}>
                             <h3>{call_bonus(day).week_day}</h3>

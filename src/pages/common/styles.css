@@ -1,0 +1,81 @@
+/* 
+ *  ASIDE - MENU LATERAL COM RESETS 
+ */
+
+aside{
+    /* background-color: blue; */
+    padding-right: 30px;
+}
+aside h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#resets{
+    margin-top: 20px;
+}
+#resets li{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 3px auto;
+    padding: 2px 16px;
+    max-width: 100%;
+    min-width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.8rem;
+    color: #666;
+}
+#resets li.geral{
+    border: 2px solid #aaa;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#resets li.hidden{
+    display: none;
+}
+aside #resets li.reseted{
+    border-color: #ddd!important;
+    color: #ddd!important;
+}
+div#resets ul li p{
+    font-size: 0.8rem;
+}
+div#resets ul li h3{
+    font-size: 0.8rem;
+    text-align: right;
+}
+#resets li .description{
+    display: none;
+}
+
+/* 
+ *  HEADER - MENU TO TOPO
+ */
+
+ header{
+    padding: 20px;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 0px;
+    height: 100%;
+}
+header h1{
+    text-align: right;
+}
+header div{
+    width: auto;
+    font-size: 0.8rem;
+}
+header div p{
+    text-align: right;
+}
+header div p span{
+    font-weight: 600;
+    color: black;
+}

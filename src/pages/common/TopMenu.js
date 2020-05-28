@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import moment from 'moment';
+import React from 'react';
 
-import wotv_logo from './img/wotv_logo.png';
-import { day_name } from './functions/week_day';
+import wotv_logo from '../../img/wotv_logo.png';
+import { day_name } from '../../functions/week_day';
+
+import { localTime_object, serverTime_object } from '../../functions/time';
+
+import './styles.css';
 
 export default function TopMenu(params) {
     
@@ -11,9 +14,10 @@ export default function TopMenu(params) {
             <img src={wotv_logo} alt="" />
             <div>
                 <h1>{day_name(serverTime_object.weekday())}</h1>
-                <p>Horário local: <span>{localTime}</span></p>
-                <p>Horário do servidor: <span>{serverHour}</span></p>
+                <p>Horário local: <span>{localTime_object.format('HH:mm:ss')}</span></p>
+                <p>Horário do servidor: <span>{serverTime_object.format('HH:mm:ss')}</span></p>
             </div>
         </header>
     )
 }
+
