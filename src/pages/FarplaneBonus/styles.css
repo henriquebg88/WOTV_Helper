@@ -9,7 +9,7 @@ section{
     
     background-color: #eee;
     border: 1px solid #ccc;
-    width: max-content;
+    /* width: max-content; */
     margin: auto;
     padding: 10px 20px;
 }
@@ -60,7 +60,7 @@ section > ul  h3:hover + p{
     /* background-color: brown; */
     text-transform: uppercase;
 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 #today_bonus h2{
@@ -70,12 +70,12 @@ section > ul  h3:hover + p{
     padding: 30px 40px;
     margin: auto;
     width: max-content;
-    border-radius: 8px;
+    border-radius: 6px;
 
     color: #666;
 
     background-color: #fefefe;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
 }
 div#today_bonus h2 + div{
     display: inline-flex;
@@ -131,10 +131,4 @@ div#today_bonus h2 + div > div{
 }
 .no_element{
     display: none;
-}
-
-.small_info{
-    color: #888;
-    font-size: 0.8em;
-    font-style: italic;
 }

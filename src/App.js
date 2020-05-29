@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.css';
+import './global.css';
 
 import Routes from './routes';
 import TopMenu from './pages/common/TopMenu';

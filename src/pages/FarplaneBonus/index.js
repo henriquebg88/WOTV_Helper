@@ -36,7 +36,7 @@ export default function FarplaneBonusPage() {
                     )
                 })}
             </ul>
-            <p className='small_info'>*Apesar de o jogo não mostrar, os mesmos bonûs contemplam o Multi.</p>
+            <p className='small-info'>*Apesar de o jogo não mostrar, os mesmos bonûs contemplam o Multi.</p>
         </section>
     )
 }

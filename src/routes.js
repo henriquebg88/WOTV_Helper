@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //Paginas
 import FarplaneBonus from './pages/FarplaneBonus';
+import GuildInfo from './pages/guildInfo';
 
 export default function Router(props) {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path='/'component={FarplaneBonus} />
+                <Route path='/farplane'component={FarplaneBonus} />
+                <Route path='/'component={GuildInfo} />
             </Switch>
         </BrowserRouter>
     )

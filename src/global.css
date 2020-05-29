@@ -15,7 +15,7 @@ h1{
     word-spacing: 0.2rem;
 }
 h2{
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 300;
 
     text-transform: uppercase;
@@ -29,13 +29,21 @@ ul{
     list-style: none;
 }
 
-
+section{
+    width: 520px;
+}
 
 .content{
     display: grid;
     grid-template-columns: 4fr 1fr;
 
     margin-top: 40px;
+}
+
+.small-info{
+    color: #888;
+    font-size: 0.8em;
+    font-style: italic;
 }
 
 
