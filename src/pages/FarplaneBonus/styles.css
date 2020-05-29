@@ -1,4 +1,4 @@
-section{
+main{
     text-align: center;
     transition: 0.2s;
     display: flex;
@@ -14,14 +14,14 @@ section{
     padding: 10px 20px;
 }
 
-section h2 + p{
+main h2 + p{
     font-size: 1.2rem;
     margin-top: 10px;
 }
-section > h3{
+main > h3{
     color: #666;
 }
-section > ul{
+main > ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
@@ -32,25 +32,25 @@ section > ul{
     color: #888;
     transition: 0.2s;
 }
-section li{
+main li{
     background-color: #fafafa;
     border-radius: 6px;
     padding: 5px;
     font-size: 0.8rem;
     border: 1px solid #ddd;
 }
-section > ul h3{
+main > ul h3{
 
     transition: 0.2s;
     cursor: help;
 }
-section > ul li p{
+main > ul li p{
     /* background-color: azure; */
     color: #aaa;
     transition: 0.2s;
     cursor: default;
 }
-section > ul  h3:hover + p{
+main > ul  h3:hover + p{
     /* background-color: azure; */
     color: #bbb;
     transition: 0.2s;

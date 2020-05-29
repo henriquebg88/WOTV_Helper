@@ -9,7 +9,7 @@ export default function FarplaneBonusPage() {
     var bonusToday = call_bonus(serverTime_object.weekday());
 
     return (
-        <section>
+        <main>
             {/* Bonus do dia atual */}
             <div id='today_bonus'>
                 <h2>Farplane Bônus</h2>
@@ -37,6 +37,6 @@ export default function FarplaneBonusPage() {
                 })}
             </ul>
             <p className='small-info'>*Apesar de o jogo não mostrar, os mesmos bonûs contemplam o Multi.</p>
-        </section>
+        </main>
     )
 }

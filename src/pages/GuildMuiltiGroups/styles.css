@@ -1,0 +1,16 @@
+.guild-groups{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.multi-group{
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+section.guild-groups li {
+    margin-bottom: 5px;
+}
+section.guild-groups p{
+    margin-bottom: 15px;
+}

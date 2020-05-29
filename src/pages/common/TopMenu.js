@@ -7,15 +7,15 @@ import { localTime_object, serverTime_object } from '../../functions/time';
 
 import './styles.css';
 
-export default function TopMenu(params) {
+export default function TopMenu() {
     
     return (
         <header className='data'>
             <img src={wotv_logo} alt="" />
             <div>
                 <h1>{day_name(serverTime_object.weekday())}</h1>
+                <p>Dia e Horário do servidor: <span>{serverTime_object.format('HH:mm:ss')}</span></p>
                 <p>Horário local: <span>{localTime_object.format('HH:mm:ss')}</span></p>
-                <p>Horário do servidor: <span>{serverTime_object.format('HH:mm:ss')}</span></p>
             </div>
         </header>
     )
