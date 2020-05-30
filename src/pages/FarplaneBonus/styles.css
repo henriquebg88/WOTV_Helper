@@ -1,27 +1,16 @@
-main{
+section.farplane{
     text-align: center;
-    transition: 0.2s;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #efefef;
-    margin: 0 40px;
-
-    
-    background-color: #eee;
-    border: 1px solid #ccc;
-    /* width: max-content; */
-    margin: auto;
-    padding: 10px 20px;
+  
 }
 
-main h2 + p{
+section.farplane h2 + p{
     font-size: 1.2rem;
     margin-top: 10px;
 }
-main > h3{
+section.farplane > h3{
     color: #666;
 }
-main > ul{
+section.farplane > ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
@@ -32,25 +21,25 @@ main > ul{
     color: #888;
     transition: 0.2s;
 }
-main li{
+section.farplane li{
     background-color: #fafafa;
     border-radius: 6px;
     padding: 5px;
     font-size: 0.8rem;
     border: 1px solid #ddd;
 }
-main > ul h3{
+section.farplane > ul h3{
 
     transition: 0.2s;
     cursor: help;
 }
-main > ul li p{
+section.farplane > ul li p{
     /* background-color: azure; */
     color: #aaa;
     transition: 0.2s;
     cursor: default;
 }
-main > ul  h3:hover + p{
+section.farplane > ul  h3:hover + p{
     /* background-color: azure; */
     color: #bbb;
     transition: 0.2s;

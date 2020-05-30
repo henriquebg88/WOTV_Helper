@@ -6,6 +6,8 @@
 }
 body{
     font-family: "Lora", Arial, Helvetica, sans-serif ;
+    background: rgb(83,67,51);
+    background: radial-gradient(circle, rgba(83,67,51,1) 0%, rgba(66,50,35,1) 82%, rgba(31,22,15,1) 100%);
 }
 h1{
     font-size: 2rem;
@@ -33,6 +35,21 @@ ul{
 
 main{
     width: 520px;
+    margin: auto;
+}
+
+section{
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #efefef;
+    margin: 0 40px;
+
+    
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin: auto;
+    padding: 10px 20px;
 }
 
 .content{
