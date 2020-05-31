@@ -15,33 +15,27 @@ aside h2{
     margin-top: 20px;
 }
 #resets li{
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 3px auto;
-    padding: 2px 16px;
+    border-radius: 2px;
+    margin: 6px auto;
+    padding: 2px 10px;
     max-width: 100%;
     min-width: 150px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     font-size: 0.8rem;
-    color: #666;
-}
-#resets li.geral{
-    border: 2px solid #aaa;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #50453f;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.4);
 }
 #resets li.hidden{
     display: none;
 }
 aside #resets li.reseted{
-    border-color: #ddd!important;
-    color: #ddd!important;
 }
 div#resets ul li p{
     font-size: 0.8rem;
+    padding: 7px 12px;
+    background-color: #1b1a16;
 }
 div#resets ul li h3{
     font-size: 0.8rem;
@@ -56,10 +50,11 @@ div#resets ul li h3{
  */
 
  header{
-    padding: 20px;
-    background-color: #eee;
+    background-color: #50453f;
     display: flex;
     justify-content: space-between;
+    height: 50px;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 }
 header img{
     width: 0px;
@@ -67,15 +62,29 @@ header img{
 }
 header h1{
     text-align: right;
+    background-color: #1b1a16;
+    font-size: 22px;
+    margin: 5px 25px;
+    color: #d3ceba;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-radius: 4px;
+    box-shadow: inset 5px 4px 10px black;
 }
-header div{
+header div.time{
     width: auto;
     font-size: 0.8rem;
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    color: #d3ceba;
 }
 header div p{
     text-align: right;
 }
 header div p span{
     font-weight: 600;
-    color: black;
 }

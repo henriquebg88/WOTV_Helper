@@ -1,0 +1,83 @@
+[
+    {
+        "dia": "Domingo",
+        "tipo_1": "ilimitado",
+        "item_1": [
+            "exp",
+            "gil",
+            "ore",
+            "egg",
+            "pot"
+        ],
+        "tipo_2": "",
+        "item_2": ""
+    },
+    {
+        "dia": "Segunda Feira",
+        "tipo_1": "2x",
+        "itens_1": [
+            "exp",
+            "gil",
+            "ore",
+            "egg",
+            "pot"
+        ],
+        "tipo_2": "",
+        "itens_2": ""
+    },
+    {
+        "dia": "Terça Feira",
+        "tipo_1": "2x",
+        "itens_1": [
+            "fire",
+            "wind"
+        ],
+        "tipo_2": "",
+        "itens_2": ""
+    },
+    {
+        "dia": "Quarta Feira",
+        "tipo_1": "2x",
+        "itens_1": [
+            "water",
+            "ice"
+        ],
+        "tipo_2": "",
+        "itens_2": ""
+    },
+    {
+        "dia": "Quinta Feira",
+        "tipo_1": "2x",
+        "item_1": [
+            "stone",
+            "dark"
+        ],
+        "tipo_2": "",
+        "item_2": ""
+    },
+    {
+        "dia": "Sexta Feira",
+        "tipo_1": "2x",
+        "item_1": [
+            "lighting",
+            "light"
+        ],
+        "tipo_2": "",
+        "item_2": ""
+    },
+    {
+        "dia": "Sábado",
+        "tipo_1": "2x",
+        "item_1": [
+            "job"
+        ],
+        "tipo_2": "ilimitado",
+        "item_2": [
+            "exp",
+            "gil",
+            "ore",
+            "egg",
+            "pot"
+        ]
+    }
+]

@@ -1,53 +1,36 @@
-section.farplane{
-    text-align: center;
-  
-}
-
 section.farplane h2 + p{
     font-size: 1.2rem;
     margin-top: 10px;
 }
 section.farplane > h3{
-    color: #666;
+
 }
 section.farplane > ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    padding: 10px;
     max-width: 500px;
     margin: 20px auto;
     margin-top: 0;
-    color: #888;
     transition: 0.2s;
 }
 section.farplane li{
-    background-color: #fafafa;
-    border-radius: 6px;
-    padding: 5px;
+    background-color: #50453f;
+    border-radius: 2px;
+    padding: 10px;
     font-size: 0.8rem;
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 section.farplane > ul h3{
-
     transition: 0.2s;
-    cursor: help;
+    margin-top: 0;
 }
 section.farplane > ul li p{
-    /* background-color: azure; */
-    color: #aaa;
     transition: 0.2s;
     cursor: default;
 }
-section.farplane > ul  h3:hover + p{
-    /* background-color: azure; */
-    color: #bbb;
-    transition: 0.2s;
-}
 
 #today_bonus{
-    /* background-color: brown; */
-    text-transform: uppercase;
 
     margin-bottom: 20px;
     margin-top: 20px;
@@ -59,12 +42,10 @@ section.farplane > ul  h3:hover + p{
     padding: 30px 40px;
     margin: auto;
     width: max-content;
-    border-radius: 6px;
+    border-radius: 2px;
 
-    color: #666;
-
-    background-color: #fefefe;
-    border: 1px solid #ddd;
+    background-color: #50453f;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.4);
 }
 div#today_bonus h2 + div{
     display: inline-flex;
@@ -76,48 +57,3 @@ div#today_bonus h2 + div > div{
 
     margin-left: 5px;
     }
-
-.elemento{
-    background-color: black;
-    height: 37px;
-    width: 37px;
-    display: flex;
-
-    border-radius: 20%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.dark{
-    background-color:purple ;
-    box-shadow: 0 0 3px purple;
-}
-.stone{
-    background-color: chocolate;
-    box-shadow: 0 0 3px chocolate;
-}
-.lightening{
-    background-color: yellow;
-    box-shadow: 0 0 3px yellow;
-}
-.light{
-    background-color: bisque;
-    box-shadow: 0 0 3px bisque;
-}
-.water{
-    background-color: darkturquoise;
-    box-shadow: 0 0 3px darkturquoise;
-}
-.ice{
-    background-color: dodgerblue;
-    box-shadow: 0 0 3px dodgerblue;
-}
-.wind{
-    background-color: greenyellow;
-    box-shadow: 0 0 3px greenyellow;
-}
-.fire{
-    background-color: orangered;
-    box-shadow: 0 0 3px orangered;
-}
-.no_element{
-    display: none;
-}

@@ -8,19 +8,17 @@ body{
     font-family: "Lora", Arial, Helvetica, sans-serif ;
     background: rgb(83,67,51);
     background: radial-gradient(circle, rgba(83,67,51,1) 0%, rgba(66,50,35,1) 82%, rgba(31,22,15,1) 100%);
+    color: #d3ceba;
 }
 h1{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
     word-spacing: 0.2rem;
 }
 h2{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 300;
-
-    text-transform: uppercase;
 
     margin-bottom: 20px;
 }
@@ -46,10 +44,13 @@ section{
     margin: 0 40px;
 
     
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: #3f322b;
+    border: none;
     margin: auto;
-    padding: 10px 20px;
+    padding: 25px 30px;
+
+    outline: 2px solid #887f66;
+    outline-offset: -15px;
 }
 
 .content{
@@ -60,9 +61,39 @@ section{
 }
 
 .small-info{
-    color: #888;
     font-size: 0.8em;
     font-style: italic;
+}
+
+.elemento{
+
+}
+.dark{
+
+}
+.stone{
+
+}
+.lightening{
+
+}
+.light{
+
+}
+.water{
+
+}
+.ice{
+
+}
+.wind{
+
+}
+.fire{
+
+}
+.no_element{
+    display: none;
 }
 
 

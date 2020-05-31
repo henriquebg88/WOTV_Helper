@@ -12,8 +12,8 @@ export default function TopMenu() {
     return (
         <header className='data'>
             <img src={wotv_logo} alt="" />
-            <div>
-                <h1>{day_name(serverTime_object.weekday())}</h1>
+            <h1>{day_name(serverTime_object.weekday())}</h1>
+            <div className='time'>
                 <p>Dia e Horário do servidor: <span>{serverTime_object.format('HH:mm:ss')}</span></p>
                 <p>Horário local: <span>{localTime_object.format('HH:mm:ss')}</span></p>
             </div>
