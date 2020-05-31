@@ -1,8 +1,25 @@
 import React from 'react';
 import { call_bonus ,next_bonus_days } from '../../functions/farplaneBonus';
 import { serverTime_object } from '../../functions/time';
+import ReactHTMLparser from 'react-html-parser';
 
 import './styles.css';
+
+function renderRows(itens) {
+
+    var itens_string = "";
+    
+    itens.map( (item) => {
+       
+        itens_string += itens[0] == item ? "<p>" : "<span>";
+        itens_string += item + " ";
+        itens_string += itens[0] == item ? "</p>" : "</span>";
+    } )
+
+    return (
+            ReactHTMLparser(itens_string)
+    )
+};
 
 export default function FarplaneBonusPage() {
     
@@ -31,8 +48,8 @@ export default function FarplaneBonusPage() {
                     {next_bonus_days(serverTime_object.weekday()).map((day) => {
                         return (
                             <li key={day}>
-                                <h3>{call_bonus(day).week_day}</h3>
-                                <p>{call_bonus(day).bonus_description}</p>
+                                <h3>{call_bonus(day).dia}</h3>
+                                {renderRows(call_bonus(day).bonus_1)}
                             </li>
                         )
                     })}

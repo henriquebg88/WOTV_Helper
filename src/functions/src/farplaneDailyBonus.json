@@ -2,15 +2,15 @@
     {
         "dia": "Domingo",
         "tipo_1": "ilimitado",
-        "item_1": [
+        "itens_1": [
             "exp",
             "gil",
             "ore",
             "egg",
             "pot"
         ],
-        "tipo_2": "",
-        "item_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Segunda Feira",
@@ -22,8 +22,8 @@
             "egg",
             "pot"
         ],
-        "tipo_2": "",
-        "itens_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Terça Feira",
@@ -32,8 +32,8 @@
             "fire",
             "wind"
         ],
-        "tipo_2": "",
-        "itens_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Quarta Feira",
@@ -42,37 +42,37 @@
             "water",
             "ice"
         ],
-        "tipo_2": "",
-        "itens_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Quinta Feira",
         "tipo_1": "2x",
-        "item_1": [
+        "itens_1": [
             "stone",
             "dark"
         ],
-        "tipo_2": "",
-        "item_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Sexta Feira",
         "tipo_1": "2x",
-        "item_1": [
+        "itens_1": [
             "lighting",
             "light"
         ],
-        "tipo_2": "",
-        "item_2": ""
+        "tipo_2": false,
+        "itens_2": false
     },
     {
         "dia": "Sábado",
         "tipo_1": "2x",
-        "item_1": [
+        "itens_1": [
             "job"
         ],
         "tipo_2": "ilimitado",
-        "item_2": [
+        "itens_2": [
             "exp",
             "gil",
             "ore",
