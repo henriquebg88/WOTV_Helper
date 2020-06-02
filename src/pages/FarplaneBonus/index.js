@@ -2,6 +2,9 @@ import React from 'react';
 import { call_bonus ,next_bonus_days } from '../../functions/farplaneBonus';
 import { serverTime_object } from '../../functions/time';
 import ReactHTMLparser from 'react-html-parser';
+import icons from '../../functions/src/icons.json'
+
+import teste from '../../img/ice_element.png'
 
 import './styles.css';
 
@@ -10,11 +13,13 @@ function renderRows(itens) {
     var itens_string = "";
     
     itens.map( (item) => {
-       
-        itens_string += itens[0] == item ? "<p>" : "<span>";
-        itens_string += item + " ";
-        itens_string += itens[0] == item ? "</p>" : "</span>";
+        
+        let icon = icons.find( () => item ).path;
+        itens_string += itens[0] == item ? `<p>${item}</p>` : `<img src="${icon}" />`;
+ 
     } )
+
+    
 
     return (
             ReactHTMLparser(itens_string)

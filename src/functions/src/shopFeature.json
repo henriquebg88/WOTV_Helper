@@ -1,6 +1,30 @@
 [
     {
+        "day": "domingo",
+        "featured": ["dark", "light"]
+    },
+    {
+        "day": "segunda",
+        "featured": ["ice"]
+    },
+    {
+        "day": "terça",
+        "featured": [""]
+    },
+    {
+        "day": "quarta",
+        "featured": [""]
+    },
+        {
+        "day": "quinta",
+        "featured": [""]
+    },
+    {
+        "day": "sexta",
+        "featured": [""]
+    },
+    {
         "day": "sabado",
-        "featured": "stone"
+        "featured": ["stone"]
     }
 ]

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "dark",
+        "path": "../../img/dark_element.png"
+    },
+    {
+        "name": "fire",
+        "path": "../../img/fire_element.png"
+    },
+    {
+        "name": "ice",
+        "path": "../../img/ice_element.png"
+    },
+    {
+        "name": "light",
+        "path": "../../img/light_element.png"
+    },
+    {
+        "name": "lightning",
+        "path": "../../img/lightning_element.png"
+    },
+    {
+        "name": "stone",
+        "path": "../../img/stone_element.png"
+    },
+    {
+        "name": "wind",
+        "path": "../../img/wind_element.png"
+    },
+    {
+        "name": "water",
+        "path": "../../img/water_element.png"
+    }
+]
