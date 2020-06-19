@@ -1,33 +1,13 @@
 import React from 'react';
-import { call_bonus ,next_bonus_days } from '../../functions/farplaneBonus';
+import { call_bonus, next_bonus_days } from '../../functions/farplaneBonus';
 import { serverTime_object } from '../../functions/time';
-import ReactHTMLparser from 'react-html-parser';
-import icons from '../../functions/src/icons.json'
-
-import teste from '../../img/ice_element.png'
+import ElementIcons from '../../img/index';
 
 import './styles.css';
 
-function renderRows(itens) {
-
-    var itens_string = "";
-    
-    itens.map( (item) => {
-        
-        let icon = icons.find( () => item ).path;
-        itens_string += itens[0] == item ? `<p>${item}</p>` : `<img src="${icon}" />`;
- 
-    } )
-
-    
-
-    return (
-            ReactHTMLparser(itens_string)
-    )
-};
 
 export default function FarplaneBonusPage() {
-    
+
     var bonusToday = call_bonus(serverTime_object.weekday());
 
     return (
@@ -36,13 +16,30 @@ export default function FarplaneBonusPage() {
             <section className="farplane">
                 {/* Bonus do dia atual */}
                 <div id='today_bonus'>
-                    {/* <h3>{call_bonus(new Date().getDay()).week_day}</h3> */}
+                    <h3>{bonusToday.dia}</h3>
                     {/* Bonus de hoje */}
                     <div>
-                        <p>{bonusToday.bonus_description}</p>
+                        <p>
+                            {call_bonus(serverTime_object.weekday()).bonus_1.map((item) => {
+                                console.log(item);
+                                if (item.in('dark', 'light', 'fire', 'ice', 'wind', 'stone', 'water', 'lightning')) {
+                                    return (
+                                        <>
+                                            <img src={ElementIcons(item)} className='bonus-icon-today' />
+                                        </>
+                                    )
+                                } else {
+                                    return (
+                                        <>
+                                            {item}
+                                        </>
+                                    )
+                                }
+                            })}
+                        </p>
                         <div>
-                            <div className={'elemento ' + bonusToday.element1}></div>
-                            <div className={'elemento ' + bonusToday.element2}></div>
+
+
                         </div>
                     </div>
                 </div>
@@ -54,14 +51,31 @@ export default function FarplaneBonusPage() {
                         return (
                             <li key={day}>
                                 <h3>{call_bonus(day).dia}</h3>
-                                {renderRows(call_bonus(day).bonus_1)}
+                                {/* <img src={renderRows(call_bonus(day).bonus_1)} alt=""/> */}
+                                {call_bonus(day).bonus_1.map((item) => {
+                                    console.log(item);
+                                    if (item.in('dark', 'light', 'fire', 'ice', 'wind', 'stone', 'water', 'lightning')) {
+                                        return (
+                                            <>
+                                                <img src={ElementIcons(item)} className='bonus-icon' />
+                                            </>
+                                        )
+                                    } else {
+                                        return (
+                                            <>
+                                                {item}
+                                            </>
+                                        )
+                                    }
+                                })}
+
                             </li>
                         )
                     })}
                 </ul>
                 <p className='small-info'>*Apesar de o jogo não mostrar, os mesmos bonûs contemplam o Multi.</p>
             </section>
-            
+
         </main>
     )
 }

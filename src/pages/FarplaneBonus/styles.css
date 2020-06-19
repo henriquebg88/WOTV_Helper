@@ -29,6 +29,12 @@ section.farplane > ul li p{
     transition: 0.2s;
     cursor: default;
 }
+section.farplane .bonus-icon {
+    width: 40px;
+}
+section.farplane .bonus-icon-today {
+    width: 80px;
+}
 
 #today_bonus{
 
